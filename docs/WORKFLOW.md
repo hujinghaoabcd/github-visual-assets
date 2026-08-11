@@ -1,35 +1,82 @@
 # Asset Workflow
 
-## 1. Define purpose
+## 1. Decide ownership before creating folders
 
-Decide whether the asset is a brand mark, README hero, project cover, architecture diagram, illustration, icon, background, screenshot or animation. Define target size and light/dark behavior first.
+Choose the canonical destination first:
+
+- `brand/` — first-party personal, repository or lab identity
+- `profile/` — GitHub profile-specific compositions
+- `projects/<project>/` — assets owned by a specific project
+- `logos/` — third-party/brand logo collections and curated logo references
+- `library/` — reusable cross-project visual building blocks
+- `references/` — inspiration/research that is not automatically reusable
+
+Define target size, format, light/dark behavior and intended use before production.
 
 ## 2. Create or collect
 
-Original work goes to `source/`. For third-party work, save the original source page, author and license before downloading or editing.
+Original editable masters belong in `source/`. For third-party material, record the original source, author/organization, license/terms and trademark restrictions before importing or editing it.
 
-## 3. Normalize
+Large mirrored logo sets should preserve their upstream/source-oriented organization under `logos/<source>/`; do not manually move thousands of files into semantic category folders.
 
-Apply the shared palette, typography and line language. Do not force every project to look identical; preserve the family distinction while maintaining the shared identity.
+## 3. Normalize only when appropriate
 
-## 4. Register provenance
+First-party and curated reusable assets can follow the shared palette, typography, spacing and visual-family rules. Raw mirrored collections should normally remain unmodified so provenance and future synchronization stay clear.
 
-For third-party assets, update `THIRD_PARTY.md` and `manifest/assets.yml`. Record modifications such as recoloring, cropping, background removal, tracing, compositing or animation.
+## 4. Register provenance and metadata
 
-## 5. Export
+For third-party assets/collections, update `THIRD_PARTY.md` and the relevant records under `manifest/`. Record source snapshots under `manifest/sources/`. Logo categories, tags, aliases, variants and duplicate relationships belong under `manifest/logos/` rather than being encoded only in physical folder paths.
 
-Export optimized assets to `exports/` when they are intended for reuse across repositories. Project-specific assets may also live under `project-covers/<project>/`.
+## 5. Publish to the owning domain
 
-## 6. Validate
+Approved outputs live with the thing that owns them:
+
+```text
+brand/...                identity assets
+profile/github/...       profile-only compositions
+projects/<project>/...   project-owned assets
+library/...              reusable shared assets
+logos/...                logo collections / canonical variants
+```
+
+`exports/` is a batch/local export workspace, not a second permanent copy of every published asset.
+
+## 6. Screenshots and references
+
+Sanitized screenshots of your own software belong under `projects/<project>/screenshots/`. Screenshots of external websites, GitHub profiles or designs kept for inspiration belong under `references/screenshots/` with source context.
+
+## 7. Validate
 
 Run:
 
 ```bash
-python scripts/validate_assets.py
+python scripts/validate/validate_assets.py
 ```
 
-Check the image visually in GitHub light and dark themes when relevant.
+Check relevant images in GitHub light and dark themes, verify file sizes, and confirm no secrets, private URLs, personal data or local paths appear in screenshots.
 
-## 7. Release and reuse
+## 8. Release and reuse
 
-When a visual kit becomes stable, tag a repository release. Long-lived documentation should reference a stable tag or release asset rather than a mutable branch when practical.
+Use canonical paths for active development. When a visual kit or shared asset set becomes stable, tag a repository release; long-lived documentation can pin that tag instead of depending indefinitely on `main`.
+
+## Lifecycle summary
+
+```text
+discover / create
+      ↓
+provenance + license review
+      ↓
+source collection OR editable master
+      ↓
+classify / dedupe / tag
+      ↓
+curate or compose for profile/project
+      ↓
+validate / optimize
+      ↓
+manifest index
+      ↓
+README / docs / site reuse
+      ↓
+archive when superseded
+```

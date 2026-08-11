@@ -2,19 +2,29 @@
 
 ## Same repository
 
-Prefer relative paths:
+Prefer relative paths when the visual asset lives in the same repository:
 
 ```html
 <img src="docs/assets/hero.svg" width="100%" alt="Project hero" />
 ```
 
-## Reusing this central library
+## Reusing the central visual library
+
+Use the canonical file that owns the asset. For example, a reusable GIS banner can be referenced directly from `library/`:
 
 ```html
-<img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/exports/svg/example.svg" width="100%" alt="Example" />
+<img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/library/banners/gis/gis-hero.svg" width="100%" alt="GIS hero" />
 ```
 
-For stable documentation, replace `main` with a release tag.
+Repository identity assets live under `brand/`, GitHub-profile-only compositions under `profile/`, project-specific artwork under `projects/<project>/`, shared visual building blocks under `library/`, and brand/logo collections under `logos/`.
+
+For long-lived documentation, replace `main` with a stable release tag when practical.
+
+## Do not duplicate canonical assets
+
+If several projects use the same illustration, animation, background or logo variant, keep one canonical file and reference it. Copy a file into a project only when the project intentionally modifies/forks that asset; the modified copy then needs its own provenance/metadata.
+
+Do not use files from `references/` as reusable production assets by default. That area is for design research and inspiration and does not imply redistribution rights.
 
 ## Recommended README visual order
 
