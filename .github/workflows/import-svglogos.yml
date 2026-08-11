@@ -1,0 +1,35 @@
+name: Import SVG Logos
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/import-svglogos.yml"
+      - "scripts/import_svglogos.sh"
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Import all SVG Logos files
+        run: bash scripts/import_svglogos.sh
+
+      - name: Commit imported collection
+        run: |
+          if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos/svglogos manifest/svglogos-upstream.json manifest/svglogos-source.json
+          git commit -m "assets: sync complete SVG Logos collection"
+          git push
