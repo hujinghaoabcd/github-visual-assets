@@ -9,6 +9,6 @@ Automated mirror of the SVG files used by SVG Logos.
 - Collection license: CC0-1.0 (see `LICENSE.txt`)
 - Metadata snapshot: `manifest/sources/svglogos.json`
 
-Individual logos and brand marks remain the property of their respective owners and can be subject to trademark/brand usage rules.
+Individual logos and brand marks remain the property of their respective owners and may be subject to trademark/brand usage rules.
 
-Do not edit mirrored SVG files manually. Re-run `scripts/import/svglogos.sh` or the importer workflow.
+Do not edit mirrored SVG files manually. Re-run `scripts/import/svglogos.sh` or the GitHub Actions importer.
