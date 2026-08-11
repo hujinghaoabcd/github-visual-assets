@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Logo Brand",
+  "type": "object",
+  "required": ["id", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "category": {"type": ["string", "null"]},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "aliases": {"type": "array", "items": {"type": "string"}}
+  }
+}

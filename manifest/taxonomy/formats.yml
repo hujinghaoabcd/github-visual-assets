@@ -1,0 +1,6 @@
+version: 1
+preferred:
+  vector: svg
+  raster: webp
+  animation: [animated-svg, webp, gif, lottie]
+  screenshot: [webp, png]

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual Asset Record",
+  "type": "object",
+  "required": ["id", "path", "kind", "origin", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "path": {"type": "string"},
+    "kind": {"type": "string"},
+    "origin": {"enum": ["first-party", "third-party", "generated"]},
+    "status": {"enum": ["active", "template", "archived", "review"]},
+    "source": {"type": ["string", "null"]},
+    "license": {"type": ["string", "null"]},
+    "category": {"type": ["string", "null"]},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

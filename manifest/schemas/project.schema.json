@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Visual Kit",
+  "type": "object",
+  "required": ["project_id", "repository", "status"],
+  "properties": {
+    "project_id": {"type": "string"},
+    "repository": {"type": "string"},
+    "family": {"type": "string"},
+    "status": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  }
+}
