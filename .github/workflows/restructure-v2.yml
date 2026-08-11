@@ -1,5 +1,6 @@
 name: Restructure repository v2
 
+# One-time migration runner; kept for manual recovery/re-runs.
 on:
   workflow_dispatch:
   push:
