@@ -12,6 +12,12 @@
   <strong>统一品牌 · 可复用模板 · 可追溯版权 · 面向 GitHub 的项目视觉资产库</strong>
 </p>
 
+<p align="center">
+  <a href="https://github.com/hujinghaoabcd/github-visual-assets/actions/workflows/validate-assets.yml"><img src="https://github.com/hujinghaoabcd/github-visual-assets/actions/workflows/validate-assets.yml/badge.svg" alt="Asset validation" /></a>
+  <img src="https://img.shields.io/badge/code-MIT-2563EB" alt="MIT" />
+  <img src="https://img.shields.io/badge/original%20assets-CC%20BY%204.0-0EA5E9" alt="CC BY 4.0" />
+</p>
+
 ---
 
 ## Overview / 项目简介
@@ -35,23 +41,27 @@ All families share the same base tokens, typography rules, spacing, icon logic, 
 
 ```text
 github-visual-assets/
-├── brand/                  # Brand core: logo, avatar, colors, typography, banners
-├── banners/                # README / docs / profile banners by project family
+├── brand/                  # Logo, avatar, colors, typography, repository identity
+├── banners/                # README / docs / profile banners by family
 ├── illustrations/          # Curated illustrations by topic
 ├── animations/             # GIF / SVG / Lottie animation assets
 ├── icons/                  # Technology, GIS, science, database, cloud icons
 ├── badges/                 # Static, Shields.io and custom badges
 ├── backgrounds/            # Light, dark, gradient, grid, map backgrounds
-├── project-covers/         # Per-project visual kits and cover art
+├── project-covers/         # Per-project visual kits and covers
 ├── screenshots/            # Product / UI screenshots
-├── templates/              # Reusable README, hero, cover and diagram templates
+├── templates/              # README, hero, cover, social-preview, diagram templates
 ├── source/                 # Editable master files
 ├── exports/                # Publish-ready SVG / PNG / WebP / GIF
-├── manifest/               # Asset metadata and catalog source
-├── scripts/                # Validation and catalog helpers
-├── docs/                   # Style guide, workflow, licensing and usage docs
-└── .github/                # CI and contribution templates
+├── manifest/               # Asset provenance metadata
+├── scripts/                # Validation helpers
+├── docs/                   # Style guide and workflow documentation
+└── .github/                # CI and issue templates
 ```
+
+## Starter gallery / 初始视觉模板
+
+See the visual catalog in [`CATALOG.md`](CATALOG.md). The starter set includes Generic, Geo/GIS, Research, AI/Data, and Software README heroes, a project-cover template, a social-preview template, palette preview, repository mark, gradient background, and badge examples.
 
 ## Core asset sizes / 推荐尺寸
 
@@ -82,11 +92,9 @@ See [`docs/ASSET_SPEC.md`](docs/ASSET_SPEC.md) for the full specification.
 | `software` | `#0F766E` | web / software |
 | `accent` | `#F59E0B` | highlight |
 
-Machine-readable tokens are stored in [`brand/colors/tokens.json`](brand/colors/tokens.json).
+Machine-readable tokens: [`brand/colors/tokens.json`](brand/colors/tokens.json).
 
 ## Standard project visual kit / 单项目标准资产包
-
-Each serious repository should gradually receive at least:
 
 ```text
 project-covers/<project>/
@@ -100,19 +108,17 @@ project-covers/<project>/
 └── thumbnail.png
 ```
 
-The `templates/project-kit/` directory contains the checklist and naming rules.
+Use [`templates/project-kit/README.md`](templates/project-kit/README.md) when creating a new project kit.
 
 ## Usage in README / README 中引用
 
-Prefer relative paths when the asset lives in the same repository. For assets hosted here and reused by other repositories, use the raw GitHub URL of a pinned branch/tag or release asset.
+For cross-repository reuse, reference a published export. For long-lived documentation, pin a release tag rather than relying forever on `main`.
 
 ```html
 <p align="center">
   <img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/exports/svg/example.svg" width="100%" />
 </p>
 ```
-
-For stable public releases, prefer version tags such as `v1.0.0` instead of depending forever on `main`.
 
 ## Workflow / 工作流
 
@@ -136,13 +142,9 @@ Detailed instructions: [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
 
 Every third-party asset must have a traceable source and license. Do **not** copy random images from GitHub, Google Images, Pinterest, blogs, or design galleries without confirming reuse rights.
 
-- Original repository assets: see [`LICENSE-ASSETS`](LICENSE-ASSETS).
-- Code and helper scripts: see [`LICENSE`](LICENSE).
-- Third-party assets: register them in [`THIRD_PARTY.md`](THIRD_PARTY.md) and `manifest/assets.yml`.
-
-## Recommended external sources / 推荐素材来源
-
-Good sources include GitHub Octodex, unDraw, Storyset, LottieFiles, SVG Repo, Devicon, Simple Icons, and Shields.io. Their terms differ, so verify each asset before importing it.
+- Code and helper scripts: [`LICENSE`](LICENSE) (MIT)
+- Original visual assets created for this repository: [`LICENSE-ASSETS`](LICENSE-ASSETS) (CC BY 4.0)
+- Third-party assets: register them in [`THIRD_PARTY.md`](THIRD_PARTY.md) and [`manifest/assets.yml`](manifest/assets.yml)
 
 ## Documentation
 
@@ -169,6 +171,4 @@ Good sources include GitHub Octodex, unDraw, Storyset, LottieFiles, SVG Repo, De
 
 ---
 
-<p align="center">
-  <sub>Built as a long-term visual infrastructure for open-source and research projects.</sub>
-</p>
+<p align="center"><sub>Built as long-term visual infrastructure for open-source and research projects.</sub></p>

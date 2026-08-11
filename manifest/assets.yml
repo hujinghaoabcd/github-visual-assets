@@ -1,0 +1,83 @@
+version: 1
+repository: hujinghaoabcd/github-visual-assets
+
+assets:
+  - id: repository-mark
+    path: brand/logo/primary/repository-mark.svg
+    type: logo
+    family: generic
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: active
+
+  - id: readme-hero
+    path: brand/banners/readme-hero.svg
+    type: banner
+    family: generic
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: active
+
+  - id: core-palette
+    path: brand/colors/palette.svg
+    type: palette
+    family: generic
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: active
+
+  - id: generic-hero
+    path: banners/generic/generic-hero.svg
+    type: banner
+    family: generic
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: template
+
+  - id: gis-hero
+    path: banners/gis/gis-hero.svg
+    type: banner
+    family: geo
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: template
+
+  - id: research-hero
+    path: banners/research/research-hero.svg
+    type: banner
+    family: research
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: template
+
+  - id: ai-hero
+    path: banners/ai/ai-hero.svg
+    type: banner
+    family: ai
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: template
+
+  - id: software-hero
+    path: banners/software/software-hero.svg
+    type: banner
+    family: software
+    origin: original
+    author: Jinghao Hu
+    license: CC-BY-4.0
+    source: internal
+    status: template

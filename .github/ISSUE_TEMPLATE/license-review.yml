@@ -1,0 +1,29 @@
+name: License review
+description: Review provenance before importing a third-party asset
+title: "[License] "
+labels: ["license-review"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Original source URL
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author / organization
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License or terms URL
+    validations:
+      required: true
+  - type: textarea
+    id: modifications
+    attributes:
+      label: Planned modifications and usage
+    validations:
+      required: true

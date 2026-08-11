@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <rect width="1200" height="420" rx="28" fill="#f8fafc"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="60" y="72" font-size="34" font-weight="800" fill="#0f172a">Core Palette</text>
+    <g transform="translate(60 110)">
+      <g><rect width="126" height="180" rx="18" fill="#0f172a"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Ink</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#0F172A</text></g>
+      <g transform="translate(144)"><rect width="126" height="180" rx="18" fill="#2563eb"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Primary</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#2563EB</text></g>
+      <g transform="translate(288)"><rect width="126" height="180" rx="18" fill="#0ea5e9"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Geo</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#0EA5E9</text></g>
+      <g transform="translate(432)"><rect width="126" height="180" rx="18" fill="#4f46e5"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Research</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#4F46E5</text></g>
+      <g transform="translate(576)"><rect width="126" height="180" rx="18" fill="#7c3aed"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">AI</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#7C3AED</text></g>
+      <g transform="translate(720)"><rect width="126" height="180" rx="18" fill="#0f766e"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Software</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#0F766E</text></g>
+      <g transform="translate(864)"><rect width="126" height="180" rx="18" fill="#f59e0b"/><text x="63" y="218" text-anchor="middle" font-size="16" fill="#0f172a">Accent</text><text x="63" y="244" text-anchor="middle" font-size="14" fill="#64748b">#F59E0B</text></g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="GitHub Visual Assets repository mark">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0ea5e9"/><stop offset=".52" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+  <rect x="40" y="40" width="432" height="432" rx="112" fill="#0f172a"/>
+  <circle cx="256" cy="256" r="126" fill="none" stroke="url(#g)" stroke-width="24"/>
+  <path d="M145 278c58-80 164-113 237-26M166 205c70 40 150 45 207 8M193 357c44-46 104-68 166-62" fill="none" stroke="#e0f2fe" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="166" cy="205" r="16" fill="#38bdf8"/><circle cx="373" cy="213" r="16" fill="#818cf8"/><circle cx="359" cy="295" r="16" fill="#c4b5fd"/><circle cx="193" cy="357" r="16" fill="#67e8f9"/>
+</svg>

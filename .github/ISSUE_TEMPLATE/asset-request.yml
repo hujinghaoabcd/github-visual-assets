@@ -1,0 +1,35 @@
+name: Asset request
+description: Request a new reusable visual asset
+title: "[Asset] "
+labels: ["asset-request"]
+body:
+  - type: dropdown
+    id: family
+    attributes:
+      label: Visual family
+      options:
+        - Geo / GIS
+        - Research
+        - AI / Data
+        - Software
+        - Generic
+    validations:
+      required: true
+  - type: input
+    id: purpose
+    attributes:
+      label: Purpose
+      placeholder: README hero, project cover, icon, animation, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Size, text, project name, light/dark mode, animation, references, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References / source links
