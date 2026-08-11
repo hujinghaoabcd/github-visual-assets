@@ -1,5 +1,3 @@
 # Editable Sources
 
-This directory stores editable masters. Suggested subfolders: `svg/`, `figma/`, `drawio/`, and `psd/`.
-
-Do not treat `source/` as the public serving directory. Final optimized deliverables belong in `exports/`. Large binary masters should use Git LFS.
+Editable masters: Figma, Illustrator, Photoshop, draw.io, Blender, animation projects and hand-edited SVG sources. Approved publish-ready assets should live with their owning `brand/`, `profile/`, `projects/` or `library/` entry. Large binary masters should use Git LFS or external storage.

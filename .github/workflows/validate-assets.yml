@@ -17,4 +17,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate repository assets
-        run: python scripts/validate_assets.py
+        run: python scripts/validate/validate_assets.py

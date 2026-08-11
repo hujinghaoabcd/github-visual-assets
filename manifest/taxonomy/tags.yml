@@ -1,0 +1,5 @@
+version: 1
+policy:
+  case: lowercase-kebab-case
+  multi_value: true
+  note: Tags are open-ended; canonical categories are controlled by categories.yml.

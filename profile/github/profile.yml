@@ -1,0 +1,11 @@
+schema_version: 1
+profile: github
+status: draft
+hero: null
+sections:
+  - about
+  - research
+  - tech-stack
+  - projects
+  - stats
+  - contact

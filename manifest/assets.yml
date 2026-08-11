@@ -1,9 +1,9 @@
-version: 1
+version: 2
 repository: hujinghaoabcd/github-visual-assets
 
 assets:
   - id: repository-mark
-    path: brand/logo/primary/repository-mark.svg
+    path: brand/repository/logo/primary/repository-mark.svg
     type: logo
     family: generic
     origin: original
@@ -13,7 +13,7 @@ assets:
     status: active
 
   - id: readme-hero
-    path: brand/banners/readme-hero.svg
+    path: brand/repository/banners/readme-hero.svg
     type: banner
     family: generic
     origin: original
@@ -33,7 +33,7 @@ assets:
     status: active
 
   - id: generic-hero
-    path: banners/generic/generic-hero.svg
+    path: library/banners/generic/generic-hero.svg
     type: banner
     family: generic
     origin: original
@@ -43,7 +43,7 @@ assets:
     status: template
 
   - id: gis-hero
-    path: banners/gis/gis-hero.svg
+    path: library/banners/gis/gis-hero.svg
     type: banner
     family: geo
     origin: original
@@ -53,7 +53,7 @@ assets:
     status: template
 
   - id: research-hero
-    path: banners/research/research-hero.svg
+    path: library/banners/research/research-hero.svg
     type: banner
     family: research
     origin: original
@@ -63,7 +63,7 @@ assets:
     status: template
 
   - id: ai-hero
-    path: banners/ai/ai-hero.svg
+    path: library/banners/ai/ai-hero.svg
     type: banner
     family: ai
     origin: original
@@ -73,7 +73,7 @@ assets:
     status: template
 
   - id: software-hero
-    path: banners/software/software-hero.svg
+    path: library/banners/software/software-hero.svg
     type: banner
     family: software
     origin: original

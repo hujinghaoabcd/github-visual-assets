@@ -1,0 +1,6 @@
+schema_version: 1
+project_id: replace-me
+repository: owner/repository
+family: software
+status: active
+tags: []

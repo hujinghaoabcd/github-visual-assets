@@ -15,7 +15,13 @@ __pycache__/
 .venv/
 venv/
 
-# Temporary exports
+# Node / site builds
+site/node_modules/
+site/.astro/
+site/dist/
+dist/
+
+# Temporary files
 *.tmp
 *.bak
 ~$*
@@ -23,3 +29,4 @@ venv/
 # Local-only working folders
 _work/
 _private/
+_incoming/

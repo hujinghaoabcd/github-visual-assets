@@ -1,17 +1,16 @@
 # Contributing
 
-This repository is a curated visual system rather than a general image dump. Add assets only when they fit the design system or serve a clear reusable purpose.
+This repository is a curated visual asset system, not a general image dump.
 
 ## Before adding an asset
 
-1. Confirm the source and license.
-2. Prefer SVG for logos, icons, diagrams and simple illustrations.
-3. Keep editable masters in `source/` and publish-ready files in `exports/` when appropriate.
-4. Use lowercase kebab-case names.
-5. Register third-party assets in both `THIRD_PARTY.md` and `manifest/assets.yml`.
-6. Avoid committing fonts, random stock-photo dumps, uncompressed videos, or opaque files with unclear provenance.
-7. Run `python scripts/validate_assets.py` before committing.
+1. Decide ownership: `brand`, `profile`, `projects`, `logos`, `library`, or `references`.
+2. Confirm source, license and trademark/brand restrictions when third-party material is involved.
+3. Prefer SVG for logos, icons, diagrams and simple illustrations.
+4. Keep editable masters in `source/`; do not duplicate final assets in `exports/` and their canonical destination.
+5. Use safe, descriptive file names.
+6. Register provenance/metadata in `THIRD_PARTY.md` and/or `manifest/`.
+7. Do not commit font binaries, secrets, private screenshots or unknown-license asset dumps.
+8. Run `python scripts/validate/validate_assets.py` before committing.
 
-## Design changes
-
-Changes to brand tokens, logo geometry, typography policy, or core templates should update the relevant documentation and `CHANGELOG.md`.
+For large logo imports, preserve source-oriented folders and classify through `manifest/logos/`.

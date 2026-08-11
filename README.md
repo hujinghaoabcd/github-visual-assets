@@ -1,174 +1,78 @@
 <p align="center">
-  <img src="brand/banners/readme-hero.svg" alt="GitHub Visual Assets" width="100%" />
+  <img src="brand/repository/banners/readme-hero.svg" alt="GitHub Visual Assets" width="100%" />
 </p>
 
 <h1 align="center">GitHub Visual Assets</h1>
 
-<p align="center">
-  A reusable visual design system for GitHub profiles, research repositories, Geo/GIS projects, AI projects, Python packages, and web applications.
-</p>
+<p align="center">A scalable personal visual asset management system for GitHub profiles, research, Geo/GIS, AI, software projects and reusable design resources.</p>
 
-<p align="center">
-  <strong>统一品牌 · 可复用模板 · 可追溯版权 · 面向 GitHub 的项目视觉资产库</strong>
-</p>
+## Repository model
 
-<p align="center">
-  <a href="https://github.com/hujinghaoabcd/github-visual-assets/actions/workflows/validate-assets.yml"><img src="https://github.com/hujinghaoabcd/github-visual-assets/actions/workflows/validate-assets.yml/badge.svg" alt="Asset validation" /></a>
-  <img src="https://img.shields.io/badge/code-MIT-2563EB" alt="MIT" />
-  <img src="https://img.shields.io/badge/original%20assets-CC%20BY%204.0-0EA5E9" alt="CC BY 4.0" />
-</p>
-
----
-
-## Overview / 项目简介
-
-This repository is the central visual asset library for my GitHub projects. It separates editable sources from publish-ready exports, keeps third-party licenses traceable, and provides reusable templates for README heroes, project covers, social previews, architecture diagrams, badges, icons, screenshots, and animations.
-
-这个仓库用于集中管理 GitHub 个人主页与各类开源项目的视觉资产，目标不是简单“存图片”，而是建立一套可长期复用的项目视觉设计系统：统一 Logo、色彩、字体、Banner、封面、插画、动图、图标、架构图和 README 展示规范。
-
-## Design families / 四类视觉语言
-
-| Family | Usage | Visual direction |
-|---|---|---|
-| **Geo / GIS** | maps, spatial analysis, geospatial tools | earth, map lines, grids, cyan/blue |
-| **Research** | papers, algorithms, scientific code | restrained, clean, publication-oriented |
-| **AI / Data** | GNN, deep learning, data science | nodes, graphs, data flow, indigo/violet |
-| **Software** | Django, web apps, developer tools | modern product UI, teal/blue |
-
-All families share the same base tokens, typography rules, spacing, icon logic, and asset naming conventions.
-
-## Repository structure / 目录结构
+This repository is organized by **ownership and reuse**, not only by file format.
 
 ```text
-github-visual-assets/
-├── brand/                  # Logo, avatar, colors, typography, repository identity
-├── banners/                # README / docs / profile banners by family
-├── illustrations/          # Curated illustrations by topic
-├── animations/             # GIF / SVG / Lottie animation assets
-├── icons/                  # Technology, GIS, science, database, cloud icons
-├── badges/                 # Static, Shields.io and custom badges
-├── backgrounds/            # Light, dark, gradient, grid, map backgrounds
-├── project-covers/         # Per-project visual kits and covers
-├── screenshots/            # Product / UI screenshots
-├── templates/              # README, hero, cover, social-preview, diagram templates
-├── source/                 # Editable master files
-├── exports/                # Publish-ready SVG / PNG / WebP / GIF
-├── manifest/               # Asset provenance metadata
-├── scripts/                # Validation helpers
-├── docs/                   # Style guide and workflow documentation
-└── .github/                # CI and issue templates
+brand/          first-party personal / repository / lab identity
+profile/        GitHub profile-specific visual kit
+projects/       one complete visual kit per first-party project
+logos/          large logo database, grouped by source + curated subset
+library/        reusable banners, illustrations, animations, icons, backgrounds, badges and mockups
+references/     inspiration / screenshots / moodboards; not automatically redistributable
+templates/      reusable production templates
+source/         editable design masters
+manifest/       taxonomy, provenance, aliases, variants, duplicates and indexes
+scripts/        import / sync / classify / dedupe / optimize / validate tools
+site/           future searchable asset browser
+docs/           architecture, workflow, naming and licensing guidance
+archive/        retired / superseded first-party assets
+staging/        metadata review before permanent import
+exports/        batch-export workspace
 ```
 
-## Starter gallery / 初始视觉模板
+### Six primary content domains
 
-See the visual catalog in [`CATALOG.md`](CATALOG.md). The starter set includes Generic, Geo/GIS, Research, AI/Data, and Software README heroes, a project-cover template, a social-preview template, palette preview, repository mark, gradient background, and badge examples.
+| Domain | Purpose |
+|---|---|
+| `brand/` | personal, repository and GeoInnovate-Lab identity |
+| `profile/` | GitHub profile README visuals |
+| `projects/` | project-owned visual kits |
+| `logos/` | brand/logo database and source collections |
+| `library/` | shared reusable visual building blocks |
+| `references/` | visual research and inspiration only |
 
-## Core asset sizes / 推荐尺寸
+## Important rules
 
-| Asset | Recommended size |
-|---|---:|
-| Avatar | 800 × 800 |
-| README Hero | 1600 × 600 |
-| Compact README Banner | 1600 × 400 |
-| Social Preview | 1280 × 640 |
-| Project Cover | 1200 × 630 |
-| Square Project Card | 1000 × 1000 |
-| Documentation Header | 1600 × 360 |
-| Logo master | SVG |
-| Logo raster export | 512 × 512 / 1024 × 1024 |
+1. **Do not duplicate shared assets.** Projects/profile reference canonical files from `library/` or `logos/` unless intentionally modified.
+2. **Large logo sets stay source-oriented.** Classification lives in `manifest/logos/`; do not physically move tens of thousands of SVGs between category folders.
+3. **Project screenshots belong to the project.** External inspiration screenshots belong in `references/screenshots/`.
+4. **Editable source is not the published asset.** Masters live in `source/`; approved outputs live with their owning brand/profile/project/library entry.
+5. **Unknown-license material is not a reusable asset.** Keep provenance and usage terms traceable.
 
-See [`docs/ASSET_SPEC.md`](docs/ASSET_SPEC.md) for the full specification.
+## Project visual kit
 
-## Starter design tokens / 基础视觉变量
+Copy `projects/_template/` for each repository. A mature kit can contain identity, README visuals, covers, publication graphics, social cards, diagrams, figures, screenshots, demos, documentation artwork and previews.
 
-| Token | Value | Purpose |
-|---|---|---|
-| `ink` | `#0F172A` | primary dark |
-| `paper` | `#F8FAFC` | light background |
-| `primary` | `#2563EB` | core brand blue |
-| `geo` | `#0EA5E9` | GIS / geospatial |
-| `research` | `#4F46E5` | research |
-| `ai` | `#7C3AED` | AI / data |
-| `software` | `#0F766E` | web / software |
-| `accent` | `#F59E0B` | highlight |
+## GitHub profile visual kit
 
-Machine-readable tokens: [`brand/colors/tokens.json`](brand/colors/tokens.json).
+`profile/github/` is a dedicated system for hero artwork, intro blocks, section headers, research presentation, tech-stack compositions, project cards, statistics, contribution art, social/contact sections, decorations and previews.
 
-## Standard project visual kit / 单项目标准资产包
+## Logo database
 
-```text
-project-covers/<project>/
-├── logo.svg
-├── logo.png
-├── hero.svg
-├── hero-dark.svg
-├── cover.png
-├── architecture.svg
-├── demo.gif
-└── thumbnail.png
-```
+`logos/svglogos/` currently contains the SVG Logos mirror. Future source collections such as WorldVectorLogo, detain/svg-logos, Simple Icons, Devicon, SVGL and Dashboard Icons have dedicated folders. Canonical brand IDs, aliases, variants and duplicate relationships belong in `manifest/logos/`.
 
-Use [`templates/project-kit/README.md`](templates/project-kit/README.md) when creating a new project kit.
+## Starter catalog
 
-## Usage in README / README 中引用
-
-For cross-repository reuse, reference a stable file from this repository. For long-lived documentation, pin a release tag rather than relying forever on `main`.
-
-```html
-<p align="center">
-  <img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/brand/banners/readme-hero.svg" width="100%" />
-</p>
-```
-
-## Workflow / 工作流
-
-```text
-collect / design
-      ↓
-source/                 editable master
-      ↓
-license + metadata      manifest + THIRD_PARTY.md
-      ↓
-export                  SVG / PNG / WebP / GIF
-      ↓
-validate                naming / size / source / license
-      ↓
-reuse                   README / docs / social preview
-```
-
-Detailed instructions: [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
-
-## Asset provenance / 素材版权
-
-Every third-party asset must have a traceable source and license. Do **not** copy random images from GitHub, Google Images, Pinterest, blogs, or design galleries without confirming reuse rights.
-
-- Code and helper scripts: [`LICENSE`](LICENSE) (MIT)
-- Original visual assets created for this repository: [`LICENSE-ASSETS`](LICENSE-ASSETS) (CC BY 4.0)
-- Third-party assets: register them in [`THIRD_PARTY.md`](THIRD_PARTY.md) and [`manifest/assets.yml`](manifest/assets.yml)
+See [`CATALOG.md`](CATALOG.md).
 
 ## Documentation
 
-- [`docs/STYLE_GUIDE.md`](docs/STYLE_GUIDE.md) — visual system
-- [`docs/ASSET_SPEC.md`](docs/ASSET_SPEC.md) — sizes and export rules
-- [`docs/NAMING.md`](docs/NAMING.md) — naming conventions
-- [`docs/WORKFLOW.md`](docs/WORKFLOW.md) — asset production workflow
-- [`docs/README_INTEGRATION.md`](docs/README_INTEGRATION.md) — using assets across GitHub projects
-- [`docs/LICENSING.md`](docs/LICENSING.md) — provenance and licensing rules
-- [`docs/PROJECT_CHECKLIST.md`](docs/PROJECT_CHECKLIST.md) — per-project visual checklist
+- [`docs/architecture/REPOSITORY_STRUCTURE.md`](docs/architecture/REPOSITORY_STRUCTURE.md)
+- [`docs/architecture/ASSET_LIFECYCLE.md`](docs/architecture/ASSET_LIFECYCLE.md)
+- [`docs/STYLE_GUIDE.md`](docs/STYLE_GUIDE.md)
+- [`docs/ASSET_SPEC.md`](docs/ASSET_SPEC.md)
+- [`docs/NAMING.md`](docs/NAMING.md)
+- [`docs/WORKFLOW.md`](docs/WORKFLOW.md)
+- [`docs/LICENSING.md`](docs/LICENSING.md)
 
-## Roadmap
+## Licensing
 
-- [x] Repository architecture
-- [x] Visual tokens and starter SVG templates
-- [x] Licensing and provenance system
-- [x] README / project-cover / social-preview templates
-- [x] Asset validation workflow
-- [ ] Final personal / lab logo system
-- [ ] Curated GIS / research / AI / software illustration collections
-- [ ] Project kits for major repositories
-- [ ] Reusable animated SVG / GIF library
-- [ ] Automated visual catalog page
-
----
-
-<p align="center"><sub>Built as long-term visual infrastructure for open-source and research projects.</sub></p>
+Code/helpers use [`LICENSE`](LICENSE). Original visual assets use [`LICENSE-ASSETS`](LICENSE-ASSETS) unless stated otherwise. Third-party sources and restrictions are tracked in [`THIRD_PARTY.md`](THIRD_PARTY.md) and `manifest/`.

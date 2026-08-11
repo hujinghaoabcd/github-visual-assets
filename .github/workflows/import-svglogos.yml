@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - ".github/workflows/import-svglogos.yml"
-      - "scripts/import_svglogos.sh"
+      - "scripts/import/svglogos.sh"
 
 permissions:
   contents: write
@@ -18,10 +18,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Import all SVG Logos files
-        run: bash scripts/import_svglogos.sh
-
+        run: bash scripts/import/svglogos.sh
       - name: Commit imported collection
         run: |
           if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
@@ -30,6 +28,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add logos/svglogos manifest/svglogos-upstream.json manifest/svglogos-source.json
+          git add logos/svglogos manifest/sources/svglogos-upstream.json manifest/sources/svglogos.json
           git commit -m "assets: sync complete SVG Logos collection"
           git push
