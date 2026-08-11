@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Source of truth for svglogos.dev. Import every SVG file, not just README/search results.
 UPSTREAM_REPO="https://github.com/gilbarbara/logos.git"
 DEST_DIR="logos/svglogos"
 TMP_DIR="$(mktemp -d)"
