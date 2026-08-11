@@ -112,11 +112,11 @@ Use [`templates/project-kit/README.md`](templates/project-kit/README.md) when cr
 
 ## Usage in README / README 中引用
 
-For cross-repository reuse, reference a published export. For long-lived documentation, pin a release tag rather than relying forever on `main`.
+For cross-repository reuse, reference a stable file from this repository. For long-lived documentation, pin a release tag rather than relying forever on `main`.
 
 ```html
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/exports/svg/example.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/hujinghaoabcd/github-visual-assets/main/brand/banners/readme-hero.svg" width="100%" />
 </p>
 ```
 
